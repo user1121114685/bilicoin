@@ -113,11 +113,11 @@ func QRCPrint(content string) {
 }
 
 func isToday(timeStr string) bool {
-	t, _ := time.ParseInLocation("2006-01-02 15:04:05", timeStr, time.Local)
-	if t.Unix() > GetZeroTime() && t.Unix() < GetLastTime() {
-		return true
-	}
-	return false
+	//t, _ := time.ParseInLocation("2006-01-02 15:04:05", timeStr, time.Local)
+	//if t.Unix() > GetZeroTime() && t.Unix() < GetLastTime() {
+	//	return true
+	//}
+	return true
 }
 
 func GetZeroTime() int64 {

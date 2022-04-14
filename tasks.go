@@ -30,13 +30,13 @@ func TaskDropCoin(user *BiliUser) error {
 	if err := user.GetBiliCoinLog(); err != nil {
 		return err
 	}
-	for loopCount := 0; loopCount < maxLoopCount; loopCount++ {
-		if user.DropCoinCount > 4 {
-			user.InfoUpdate()
-			return nil
-		}
+	for loopCount := 0; true; loopCount++ {
+		//if user.DropCoinCount > 4 {
+		//	user.InfoUpdate()
+		//	return nil
+		//}
 		user.RandDrop()
-		ra := Random(60)
+		ra := Random(10)
 		time.Sleep(ra)
 	}
 	user.InfoUpdate()
